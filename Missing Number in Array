@@ -1,0 +1,25 @@
+//METHOD 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i;
+	    cin>>n;
+	    int a[n];
+	    for(i=0;i<n-1;i++)
+	    {
+	        cin>>a[i];
+	    }
+	    long l=0;
+	    for(i=0;i<n-1;i++)
+	    {
+	        l+=a[i];
+	    }
+	    cout<<((n*(n+1))/2)-l<<endl;
+	}
+	return 0;
+}
