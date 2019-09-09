@@ -1,0 +1,41 @@
+import java.util.*;
+import javax.swing.*;
+public class crt {
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        String n;
+        int i,j,k;
+        String s1[]=new String[10];
+        String s2[]=new String[10];
+        String labfa[]=new String[10];
+        for(i=0;i<3;i++)
+        {
+            labfa[i]=JOptionPane.showInputDialog("enter name of teacher "+(i+1));
+        }
+
+        n=JOptionPane.showInputDialog("enter the number of names");
+        for(i=0;i<Integer.parseInt(n);i++)
+        {
+            s1[i]=JOptionPane.showInputDialog("enter name of teacher "+(i+1));
+            s2[i]=JOptionPane.showInputDialog("enter subject of teacher "+(i+1));
+        }
+        for(i=0;i<6;i++)
+        {
+            if(i<3)
+            {
+                System.out.print("      "+labfa[i]+"      ");
+            }
+            if(i>=3)
+            {
+                System.out.print(s1[i-3]+"   ");
+                System.out.print(s1[i-3]+"   ");
+                System.out.print(s1[i-2]+"   ");
+                System.out.print(s1[i-2]+"   ");
+            }
+            System.out.print(s1[(i+2)%5]+"   ");
+            System.out.print(s1[(i+3)%5]+"   ");
+            System.out.println(s1[(i+4)%5]+"    ");
+        }
+    }
+}
